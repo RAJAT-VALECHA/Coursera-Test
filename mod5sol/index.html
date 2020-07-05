@@ -16,7 +16,7 @@
       <div class="container">
         <div class="navbar-header">
           <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img"></div>
+            <div id="logo-img" alt="Logo image"></div>
           </a>
 
           <div class="navbar-brand">
@@ -25,24 +25,24 @@
               <img src="images/star-k-logo.png" alt="Kosher certification">
               <span>Kosher Certified</span>
             </p>
-          </div>  
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"    data-target="#collapsable-nav" aria-expanded="false">
+          </div>
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
         </div>
-
+        
         <div id="collapsable-nav" class="collapse navbar-collapse">
            <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li class="visible-xs">
+            <li id="navHomeButton" class="visible-xs active">
               <a href="index.html">
                 <span class="glyphicon glyphicon-home"></span> Home</a>
             </li>
-            <li class="active">
-              <a href="menu-categories.html">
+            <li id="navMenuButton">
+              <a href="#" onclick="$dc.loadMenuCategories();">
                 <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
             </li>
             <li>
@@ -59,12 +59,11 @@
             </li>
           </ul><!-- #nav-list -->
         </div><!-- .collapse .navbar-collapse -->
-
-      </div>
-    </nav>
-
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
   </header>
-    <div id="call-btn" class="visible-xs">
+
+  <div id="call-btn" class="visible-xs">
     <a class="btn" href="tel:410-602-5008">
     <span class="glyphicon glyphicon-earphone"></span>
     410-602-5008
@@ -72,87 +71,7 @@
   </div>
   <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
 
-  <div id="main-content" class="container">
-    <h2 id="menu-categories-title" class="text-center">Menu Categories</h2>
-    <div class="text-center">
-      Substituting white rice with brown rice or fried rice after 3:00pm will be $1.50 for a pint and $2.50 for a quart.
-    </div>
-    <section class="row">
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-        <a href="single-category.html">
-          <div class="category-tile">
-            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
-            <span>Lunch</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-  </div>
+  <div id="main-content" class="container"></div>
 
   <footer class="panel-footer">
     <div class="container">
@@ -183,6 +102,7 @@
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
